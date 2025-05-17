@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.header {
+  background-color: #2066A5;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.header h1{
+  font-size: 1.2rem;        
+  margin: 0;
+}
+.header nav a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: #dedede;
+  text-align: center;
+}
+
+.hero button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.collection {
+  padding: 2rem;
+}
+
+.art-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.art-card {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.logo-bar {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line */
+  justify-content: space-between; /* Optional: Adjust spacing */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-img {
+  max-height: 80px;
+  object-fit: contain;
+}
