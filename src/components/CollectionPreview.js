@@ -22,14 +22,7 @@ const CollectionPreview = () => {
           placeholder="Search artworks..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: "0.5rem 1rem",
-            width: "300px",
-            fontSize: "1rem",
-            border: "1px solid #ccc",
-            borderRadius: "6px",
-            marginBottom: "1rem",
-          }}
+          className="search-bar"
         />
         <h3>Featured Artworks</h3>
       </div>
