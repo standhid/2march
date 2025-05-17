@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 
 const artworks = [
-  { title: "Ancient Vase", img: "https://via.placeholder.com/200", period: "Greek" },
-  { title: "Medieval Sword", img: "https://via.placeholder.com/200", period: "Medieval" },
-  { title: "Oil Portrait", img: "https://via.placeholder.com/200", period: "18th Century" },
-  { title: "Modern Sculpture", img: "https://via.placeholder.com/200", period: "Modern" },
+  { title: "Hermez", img: "https://via.placeholder.com/200", period: "Greek" },
+  { title: "Chopard", img: "https://via.placeholder.com/200", period: "Medieval" },
+  { title: "Isabel Marant", img: "https://via.placeholder.com/200", period: "18th Century" },
+  { title: "Jaipur Modern", img: "https://via.placeholder.com/200", period: "Modern" },
 ];
 
 const CollectionPreview = () => {
@@ -50,12 +51,16 @@ const CollectionPreview = () => {
                 alt={art.title}
                 style={{ width: "100%", borderRadius: "4px" }}
               />
-              <h4>{art.title}</h4>
+              <h4>
+                <Link to={`/brand/${encodeURIComponent(art.title)}`}>
+                  {art.title}
+                </Link>
+              </h4>
               <p>{art.period}</p>
             </div>
           ))
         ) : (
-          <p>No artworks found.</p>
+          <p>No brands found.</p>
         )}
       </div>
     </section>

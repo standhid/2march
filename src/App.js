@@ -1,20 +1,37 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import CollectionPreview from "./components/CollectionPreview";
 import Footer from "./components/Footer";
-import "./App.css";
 import LogoBar from "./components/LogoBar";
+import BrandPage from "./components/BrandPage"; // 👈 NEW: Import the brand page component
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <LogoBar />
-      <Header />
-      <Hero />
-      <CollectionPreview />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <LogoBar />
+        <Header />
+        <Routes>
+          {/* Home page */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <CollectionPreview />
+              </>
+            }
+          />
+
+          {/* Brand-specific page */}
+          <Route path="/brand/:brandName" element={<BrandPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
